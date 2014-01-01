@@ -1,0 +1,92 @@
+[OPTIONS]
+Auto Index=Yes
+Compatibility=1.1 or later
+Compiled file=Axis2.chm
+Contents file=Axis2.hhc
+Default Font=Arial,10,0
+Default Window=Main
+Default topic=Welcome.htm
+Display compile notes=No
+Display compile progress=No
+Full-text search=Yes
+Index file=Axis2.hhk
+Language=0x409 English (United States)
+Title=Axis2 Help
+
+[WINDOWS]
+Main="Axis2 Help","Axis2.hhc","Axis2.hhk","Welcome.htm",,,,,,0x1520,205,0x3006,[262,155,810,575],,,,,,,0
+
+
+[FILES]
+General_Tab.htm
+Profile_Tab.htm
+Log_Tab.htm
+Spawn_Tab.htm
+Item_Tab.htm
+Launcher_Tab.htm
+Travel_Tab.htm
+Command_Tab.htm
+ItemTweak_Tab.htm
+PlayerTweak_Tab.htm
+Account_Tab.htm
+Remote_Console.htm
+Search.htm
+Add_Location.htm
+LightWiz.htm
+DoorWiz.htm
+Color_Select.htm
+Profile_Login.htm
+Remote_Console_Login.htm
+Local_Profile.htm
+Web_Profile.htm
+Web_Profile_Setup.htm
+Axis2_ini.htm
+LightWiz_ini.htm
+DoorWiz_ini.htm
+Welcome.htm
+Setting_Travel.htm
+Setting_FilePath.htm
+Setting_General.htm
+Setting_Item.htm
+Setting_OverrideMulPath.htm
+Setting_Spawn.htm
+
+[ALIAS]
+HIDD_ABOUTBOX=Welcome.htm
+HIDD_ACCOUNT_TAB = Account_Tab.htm
+HIDD_ADD_DESTINATION=Add_Location.htm
+HIDD_AXIS2_DIALOG=Welcome.htm
+HIDD_COLOR_DLG=Color_Select.htm
+HIDD_COMMANDS_TAB = Command_Tab.htm
+HIDD_DOORWIZARD=DoorWiz.htm
+HIDD_GENERAL_TAB=General_Tab.htm
+HIDD_ITEMS_TAB = Item_Tab.htm
+HIDD_ITEMTWEAK_TAB = ItemTweak_Tab.htm
+HIDD_LAUNCHER_TAB = Launcher_Tab.htm
+HIDD_LIGHTWIZARD=LightWiz.htm
+HIDD_LOG_TAB = Log_Tab.htm
+HIDD_PLAYERTWEAK_TAB = PlayerTweak_Tab.htm
+HIDD_PROFILE_LOGIN_DLG=Profile_Login.htm
+HIDD_PROFILE_TAB = Profile_Tab.htm
+HIDD_PROGRESS=Welcome.htm
+HIDD_REMOTE_CONSOLE_LOGIN_DLG=Remote_Console_Login.htm
+HIDD_REMOTECONSOLEDLG=Remote_Console.htm
+HIDD_SEARCHCRITDLG=Search.htm
+HIDD_SETTING_GENERAL=Setting_General.htm
+HIDD_SETTING_ITEM=Setting_Item.htm
+HIDD_SETTING_PATH_OVERRIDE=Setting_OverrideMulPath.htm
+HIDD_SETTING_PATHS=Setting_FilePath.htm
+HIDD_SETTING_SPAWN=Setting_Spawn.htm
+HIDD_SETTING_TRAVEL=Setting_Travel.htm
+HIDD_SPAWN_TAB = Spawn_Tab.htm
+HIDD_TRAVEL_TAB = Travel_Tab.htm
+HIDD_WORLDMAP=Travel_Tab.htm#world
+
+[MAP]
+#include HTMLDefines.h
+
+[TEXT POPUPS]
+HTMLDefines.h
+
+[INFOTYPES]
+
