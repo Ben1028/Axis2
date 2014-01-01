@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Welcome">
+		<param name="Local" value="Welcome.htm">
+		<param name="ImageNumber" value="15">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Settings">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="General">
+			<param name="Local" value="Setting_General.htm">
+			<param name="ImageNumber" value="12">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="File Paths">
+			<param name="Local" value="Setting_FilePath.htm">
+			<param name="ImageNumber" value="12">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Items">
+			<param name="Local" value="Setting_Item.htm">
+			<param name="ImageNumber" value="12">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Travel">
+			<param name="Local" value="Setting_Travel.htm">
+			<param name="ImageNumber" value="12">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Spawn">
+			<param name="Local" value="Setting_Spawn.htm">
+			<param name="ImageNumber" value="12">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Override Mul Paths">
+			<param name="Local" value="Setting_OverrideMulPath.htm">
+			<param name="ImageNumber" value="12">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Tabs">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="General Tab">
+			<param name="Local" value="General_Tab.htm">
+			<param name="ImageNumber" value="12">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Travel Tab">
+			<param name="Local" value="Travel_Tab.htm">
+			<param name="ImageNumber" value="12">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Spawn Tab">
+			<param name="Local" value="Spawn_Tab.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Character Tweak Tab">
+			<param name="Local" value="PlayerTweak_Tab.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Items Tab">
+			<param name="Local" value="Item_Tab.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Item Tweak Tab">
+			<param name="Local" value="ItemTweak_Tab.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Account Tab">
+			<param name="Local" value="Account_Tab.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Launcher Tab">
+			<param name="Local" value="Launcher_Tab.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Profile Tab">
+			<param name="Local" value="Profile_Tab.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Commands Tab">
+			<param name="Local" value="Command_Tab.htm">
+			<param name="ImageNumber" value="12">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Log Tab">
+			<param name="Local" value="Log_Tab.htm">
+			<param name="ImageNumber" value="12">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Dialogs">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Color Selection">
+			<param name="Local" value="Color_Select.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Custom Destination Editor">
+			<param name="Local" value="Add_Location.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Door Wizard">
+			<param name="Local" value="DoorWiz.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Light Wizard">
+			<param name="Local" value="LightWiz.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Remote Console">
+			<param name="Local" value="Remote_Console.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Remote Console Login">
+			<param name="Local" value="Remote_Console_Login.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Profile Login">
+			<param name="Local" value="Profile_Login.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Search Criteria">
+			<param name="Local" value="Search.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Profiles">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Local Profile Creation">
+			<param name="Local" value="Local_Profile.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Web Profiles">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Profile Creation">
+				<param name="Local" value="Web_Profile.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Server Side Setup">
+				<param name="Local" value="Web_Profile_Setup.htm">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Axis2.ini">
+			<param name="Local" value="Axis2_ini.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="DoorWiz.ini">
+			<param name="Local" value="DoorWiz_ini.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="LightWiz.ini">
+			<param name="Local" value="LightWiz_ini.htm">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>

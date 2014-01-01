@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Axis2", "Axis2\Axis2.vcproj", "{72C4A629-C937-46FC-A0AB-731CBCD467AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Unicode Debug|Win32 = Unicode Debug|Win32
+		Unicode Release|Win32 = Unicode Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72C4A629-C937-46FC-A0AB-731CBCD467AE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{72C4A629-C937-46FC-A0AB-731CBCD467AE}.Debug|Win32.Build.0 = Debug|Win32
+		{72C4A629-C937-46FC-A0AB-731CBCD467AE}.Release|Win32.ActiveCfg = Release|Win32
+		{72C4A629-C937-46FC-A0AB-731CBCD467AE}.Release|Win32.Build.0 = Release|Win32
+		{72C4A629-C937-46FC-A0AB-731CBCD467AE}.Unicode Debug|Win32.ActiveCfg = Debug|Win32
+		{72C4A629-C937-46FC-A0AB-731CBCD467AE}.Unicode Debug|Win32.Build.0 = Debug|Win32
+		{72C4A629-C937-46FC-A0AB-731CBCD467AE}.Unicode Release|Win32.ActiveCfg = Release|Win32
+		{72C4A629-C937-46FC-A0AB-731CBCD467AE}.Unicode Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

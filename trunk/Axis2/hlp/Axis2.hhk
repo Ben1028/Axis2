@@ -1,0 +1,625 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="FrameName" value="right">
+	<param name="SaveType" value="Group">
+	<param name="SaveTypeDesc" value=" ">
+	<param name="Category" value="General">
+	<param name="CategoryDesc" value=" ">
+	<param name="Type" value="Group">
+	<param name="TypeDesc" value=" ">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Go">
+		<param name="Name" value="Travel Tab">
+		<param name="Local" value="Travel_Tab.htm#go">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Send">
+		<param name="Name" value="Travel Tab">
+		<param name="Local" value="Travel_Tab.htm#send">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Add">
+		<param name="Name" value="Travel Tab">
+		<param name="Local" value="Travel_Tab.htm#add">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Edit">
+		<param name="Name" value="Travel Tab">
+		<param name="Local" value="Travel_Tab.htm#edit">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Del">
+		<param name="Name" value="Travel Tab">
+		<param name="Local" value="Travel_Tab.htm#delete">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Where">
+		<param name="Name" value="Travel Tab">
+		<param name="Local" value="Travel_Tab.htm#where">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Zoom in">
+		<param name="Name" value="Travel Tab">
+		<param name="Local" value="Travel_Tab.htm#zoom_in">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Zoom out">
+		<param name="Name" value="Travel Tab">
+		<param name="Local" value="Travel_Tab.htm#zoom_out">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Pos">
+		<param name="Name" value="Travel Tab">
+		<param name="Local" value="Travel_Tab.htm#position">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Track">
+		<param name="Name" value="Travel Tab">
+		<param name="Local" value="Travel_Tab.htm#track">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Map">
+		<param name="Name" value="Travel Tab">
+		<param name="Local" value="Travel_Tab.htm#map">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Search">
+		<param name="Name" value="Travel Tab">
+		<param name="Local" value="Travel_Tab.htm#search">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Map view">
+		<param name="Name" value="Travel Tab">
+		<param name="Local" value="Travel_Tab.htm#map_view">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="World map">
+		<param name="Name" value="Travel Tab">
+		<param name="Local" value="Travel_Tab.htm#world">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="File Paths">
+		<param name="Name" value="Settings - Override Mul Paths">
+		<param name="Local" value="Setting_OverrideMulPath.htm#file_path">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Browse">
+		<param name="Name" value="Settings - Override Mul Paths">
+		<param name="Local" value="Setting_OverrideMulPath.htm#browse">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Reset Default Path">
+		<param name="Name" value="Settings - Override Mul Paths">
+		<param name="Local" value="Setting_OverrideMulPath.htm#reset_Path">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Show NPCs display">
+		<param name="Name" value="Settings - Spawn">
+		<param name="Local" value="Setting_Spawn.htm#show_npc_display">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Show map display">
+		<param name="Name" value="Settings - Travel">
+		<param name="Local" value="Setting_Travel.htm#show_map_display">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Draw statics">
+		<param name="Name" value="Settings - Travel">
+		<param name="Local" value="Setting_Travel.htm#draw_statics">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Use map and static dif files">
+		<param name="Name" value="Settings - Travel">
+		<param name="Local" value="Setting_Travel.htm#draw_dift">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Show spawn points">
+		<param name="Name" value="Settings - Travel">
+		<param name="Local" value="Setting_Travel.htm#show_spawn">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="NPC spawn color">
+		<param name="Name" value="Settings - Travel">
+		<param name="Local" value="Setting_Travel.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Item spawn color">
+		<param name="Name" value="Settings - Travel">
+		<param name="Local" value="Setting_Travel.htm#item_color">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Default ultima online client*">
+		<param name="Name" value="Settings - File Paths">
+		<param name="Local" value="Setting_FilePath.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Default mulfile path*">
+		<param name="Name" value="Settings - File Paths">
+		<param name="Local" value="Setting_FilePath.htm#default_mul">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Browse">
+		<param name="Name" value="Settings - File Paths">
+		<param name="Local" value="Setting_FilePath.htm#browse_client">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Browse">
+		<param name="Name" value="Settings - File Paths">
+		<param name="Local" value="Setting_FilePath.htm#browse_mul">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Use same path as default client">
+		<param name="Name" value="Settings - File Paths">
+		<param name="Local" value="Setting_FilePath.htm#same_client">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Show item display">
+		<param name="Name" value="Settings - Items">
+		<param name="Local" value="Setting_Item.htm#show_display">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Show item generator roomview">
+		<param name="Name" value="Settings - Items">
+		<param name="Local" value="Setting_Item.htm#show_roomview">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Reset settings*">
+		<param name="Name" value="Settings - General">
+		<param name="Local" value="Setting_General.htm#reset">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Start with ??? tab">
+		<param name="Name" value="Settings - General">
+		<param name="Local" value="Setting_General.htm#start_with">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Load default profile on startup">
+		<param name="Name" value="Settings - General">
+		<param name="Local" value="Setting_General.htm#load_default">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Allow close from system menu">
+		<param name="Name" value="Settings - General">
+		<param name="Local" value="Setting_General.htm#allow_close">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Basic Axis Settings*">
+		<param name="Name" value="Settings - General">
+		<param name="Local" value="Setting_General.htm#basic">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Version">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#version">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Allow multiple instances of Axis">
+		<param name="Name" value="Settings - General">
+		<param name="Local" value="Setting_General.htm#multiple">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Always on top">
+		<param name="Name" value="Settings - General">
+		<param name="Local" value="Setting_General.htm#always_top">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Serv Info">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#serv-info">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Clients">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#clients">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Edit">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#edit">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Info">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#info">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Admin">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#admin">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Information*">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#information">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Misc*">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#misc">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Link">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#link">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Flip">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#flip">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Shrink">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#shrink">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Dupe">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#dupe">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Remove">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#remove">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Nuke">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#nuke">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Vendors*">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#vendors">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Rain">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#rain">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Dry">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#dry">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Light Level">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#light_level">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Self*">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#self">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Invul">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#invul">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Allmove">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#allmove">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Invisible">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#invisible">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Fix">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#fix">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Tele">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#tele">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Hear All">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#hearall">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GM Toggle">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#gm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Detail">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#detail">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Nightsight">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#nightsight">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Debug">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#debug">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Discipline*">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#discipline">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Jail">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#jail">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Forgive">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#forgive">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Kill">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#kill">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Disconnect">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#disconnect">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Resurect">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#resurect">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GM Page*">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#gm_page">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GM Page - On">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#on">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GM Page - Off">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#off">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GM Page - List">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#list">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GM Page - Queue">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#queue">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GM Page - Go Player">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#go_player">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GM Page - Go Origin">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#go_origin">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GM Page - Disconnect">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#page_disconnect">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GM Page - Jail">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#page_jail">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GM Page - Ban">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#ban">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GM Page - Delete">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#delete">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Save World">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#world_save">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Save Statics">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#static_save">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Resync">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#resync">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Restock all NPCs">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#restock_all">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Remote Console">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#remote_console">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Black Log Line">
+		<param name="Name" value="Log Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="Log_Tab.htm#black">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Blue Log Line">
+		<param name="Name" value="Log Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="Log_Tab.htm#blue">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Red Log Line">
+		<param name="Name" value="Log Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="Log_Tab.htm#red">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Button Control*">
+		<param name="Name" value="Commands Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="Command_Tab.htm#button">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Caption">
+		<param name="Name" value="Commands Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="Command_Tab.htm#caption">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Command">
+		<param name="Name" value="Commands Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="Command_Tab.htm#command">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Add">
+		<param name="Name" value="Commands Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="Command_Tab.htm#add">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Edit">
+		<param name="Name" value="Commands Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="Command_Tab.htm#edit">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Remove">
+		<param name="Name" value="Commands Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="Command_Tab.htm#remove">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Tab Control*">
+		<param name="Name" value="Commands Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="Command_Tab.htm#tab">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Tab Label">
+		<param name="Name" value="Commands Tab">
+		<param name="Local" value="Command_Tab.htm#label">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Add Tab">
+		<param name="Name" value="Commands Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="Command_Tab.htm#add_tab">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Del Tab">
+		<param name="Name" value="Commands Tab">
+		<param name="Local" value="Command_Tab.htm#delete_tab">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Clear Tab">
+		<param name="Name" value="Commands Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="Command_Tab.htm#clear_tab">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Buy">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#buy">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sell">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#sell">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Inventory">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#inventory">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Purchases">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#purchases">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Samples">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#samples">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Restock">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#restock">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Weather*">
+		<param name="Name" value="General Tab">
+		<param name="Type" value="General::Group">
+		<param name="Local" value="General_Tab.htm#weather">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Snow">
+		<param name="Name" value="General Tab">
+		<param name="Local" value="General_Tab.htm#snow">
+		</OBJECT>
+</UL>
+</BODY></HTML>
