@@ -46,6 +46,7 @@ CSettingsGeneral::CSettingsGeneral() : CPropertyPage(CSettingsGeneral::IDD)
 	m_bAlwaysOnTop = FALSE;
 	m_bSysClose = FALSE;
 	m_bLoadDefault = FALSE;
+	m_bDisableToolbar = FALSE;
 	//}}AFX_DATA_INIT
 }
 
@@ -63,10 +64,11 @@ void CSettingsGeneral::DoDataExchange(CDataExchange* pDX)
 	DDX_Check(pDX, IDC_SYSCLOSE, m_bSysClose);
 	DDX_Check(pDX, IDC_LOADDEFAULT, m_bLoadDefault);
 	DDX_Check(pDX, IDC_ALLOWMULTIPLE, m_bAllowMultiple);
+	DDX_Check(pDX, IDC_DISABLE_TOOLBAR, m_bDisableToolbar);
 	DDX_Control(pDX, IDC_STARTTAB, m_ccbStartTab);
 	DDX_Control(pDX, IDC_RESETSTING, m_cbResetSettings);
 	DDX_Control(pDX, IDC_PREFIX, m_ceCommandPrefix);
-	DDX_Control(pDX, IDC_LANGUAGE, m_ccbLanguage);
+	DDX_Control(pDX, IDC_UOTITLE, m_ceUOTitle);
 	//}}AFX_DATA_MAP
 }
 
@@ -81,7 +83,8 @@ BEGIN_MESSAGE_MAP(CSettingsGeneral, CPropertyPage)
 	ON_BN_CLICKED(IDC_RESETSTING, OnResetSettings)
 	ON_BN_CLICKED(IDC_RESET_GENERAL, OnResetTab)
 	ON_EN_CHANGE(IDC_PREFIX, OnChangePrefix)
-	ON_CBN_SELCHANGE(IDC_LANGUAGE, OnSelchangeLanguage)
+	ON_BN_CLICKED(IDC_DISABLE_TOOLBAR, OnDisableToolbar)
+	ON_EN_CHANGE(IDC_UOTITLE, OnChangeUOTitle)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -98,6 +101,8 @@ BOOL CSettingsGeneral::OnInitDialog()
 	m_bLoadDefault = (BOOL) Main->m_dwLoadDefault;
 	m_ccbStartTab.SetCurSel(Main->m_dwStartTab);
 	m_ceCommandPrefix.SetWindowText(Main->m_csCommandPrefix);
+	m_bDisableToolbar = (BOOL) Main->m_dwDisableToolbar;
+	m_ceUOTitle.SetWindowText(Main->m_csUOTitle);
 
 	UpdateData(false);
 
@@ -142,11 +147,11 @@ void CSettingsGeneral::OnSelchangeStartTab()
 	Main->m_dwStartTab = iSel;
 }
 
-void CSettingsGeneral::OnSelchangeLanguage()
+void CSettingsGeneral::OnDisableToolbar()
 {
 	UpdateData();
-	//int iSel = m_ccbLanguage.GetCurSel();
-	//Main->PutRegistryString(("Language", iSel);
+	Main->PutRegistryDword("DisableToolbar", m_bDisableToolbar);
+	Main->m_dwDisableToolbar = m_bDisableToolbar;
 }
 
 void CSettingsGeneral::OnChangePrefix()
@@ -157,6 +162,14 @@ void CSettingsGeneral::OnChangePrefix()
 	Main->m_csCommandPrefix = csPrefix;
 }
 
+void CSettingsGeneral::OnChangeUOTitle()
+{
+	CString csTitle;
+	m_ceUOTitle.GetWindowText(csTitle);
+	Main->PutRegistryString("UOTitle", csTitle);
+	Main->m_csUOTitle = csTitle;
+}
+
 void CSettingsGeneral::OnResetTab()
 {
 	if ( AfxMessageBox( "Are you sure you want to reset the General settings to default?", MB_OKCANCEL | MB_ICONQUESTION) == IDCANCEL )
@@ -165,6 +178,9 @@ void CSettingsGeneral::OnResetTab()
 	Main->LoadIni(0,"AlwaysOnTop");
 	m_bAlwaysOnTop = (BOOL) Main->m_dwAlwaysOnTop;
 	Main->PutRegistryDword("AlwaysOnTop", m_bAlwaysOnTop);
+	Main->LoadIni(0,"DisableToolbar");
+	m_bDisableToolbar = (BOOL) Main->m_dwDisableToolbar;
+	Main->PutRegistryDword("DisableToolbar", m_bDisableToolbar);
 	Main->LoadIni(0,"SysClose");
 	m_bSysClose = (BOOL) Main->m_dwSysClose;
 	Main->PutRegistryDword("SysClose", m_bSysClose);
@@ -180,6 +196,9 @@ void CSettingsGeneral::OnResetTab()
 	Main->LoadIni(0,"CommandPrefix");
 	m_ceCommandPrefix.SetWindowText(Main->m_csCommandPrefix);
 	Main->PutRegistryString("CommandPrefix", Main->m_csCommandPrefix);
+	Main->LoadIni(0,"UOTitle");
+	m_ceUOTitle.SetWindowText(Main->m_csUOTitle);
+	Main->PutRegistryString("UOTitle", Main->m_csUOTitle);
 
 	UpdateData(false);
 }
@@ -195,6 +214,8 @@ void CSettingsGeneral::OnResetSettings()
 	//General Tab
 	m_bAlwaysOnTop = (BOOL) Main->m_dwAlwaysOnTop;
 	Main->PutRegistryDword("AlwaysOnTop", m_bAlwaysOnTop);
+	m_bDisableToolbar = (BOOL) Main->m_dwDisableToolbar;
+	Main->PutRegistryDword("DisableToolbar", m_bDisableToolbar);
 	m_bSysClose = (BOOL) Main->m_dwSysClose;
 	Main->PutRegistryDword("SysClose", m_bSysClose);
 	m_bAllowMultiple = (BOOL) Main->m_dwAllowMultiple;
@@ -205,6 +226,8 @@ void CSettingsGeneral::OnResetSettings()
 	Main->PutRegistryDword("StartTab", Main->m_dwStartTab);
 	m_ceCommandPrefix.SetWindowText(Main->m_csCommandPrefix);
 	Main->PutRegistryString("CommandPrefix", Main->m_csCommandPrefix);
+	m_ceUOTitle.SetWindowText(Main->m_csUOTitle);
+	Main->PutRegistryString("UOTitle", Main->m_csUOTitle);
 
 	//Item Tab
 	Main->m_pcppSetItem->m_bRoomView = (BOOL) Main->m_dwRoomView;

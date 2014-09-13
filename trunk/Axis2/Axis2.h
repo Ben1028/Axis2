@@ -128,6 +128,7 @@ public:
 	DWORD m_dwSysClose;
 	DWORD m_dwAllowMultiple;
 	DWORD m_dwAlwaysOnTop;
+	DWORD m_dwDisableToolbar;
 	DWORD m_dwLoadDefault;
 	DWORD m_dwStartTab;
 	DWORD m_dwRoomView;
@@ -144,6 +145,7 @@ public:
 	DWORD m_dwShowNPCs;
 	DWORD m_dwShowMap;
 	CString m_csCommandPrefix;
+	CString m_csUOTitle;
 	bool bMemoryAccess;
 	bool bLoadedMul;
 

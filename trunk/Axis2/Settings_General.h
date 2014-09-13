@@ -49,10 +49,11 @@ public:
 	BOOL	m_bAlwaysOnTop;
 	BOOL	m_bSysClose;
 	BOOL	m_bLoadDefault;
+	BOOL	m_bDisableToolbar;
 	CComboBox	m_ccbStartTab;
 	CButton m_cbResetSettings;
 	CEdit	m_ceCommandPrefix;
-	CComboBox	m_ccbLanguage;
+	CEdit	m_ceUOTitle;
 	//}}AFX_DATA
 
 
@@ -76,7 +77,8 @@ protected:
 	afx_msg void OnResetSettings();
 	afx_msg void OnResetTab();
 	afx_msg void OnChangePrefix();
-	afx_msg void OnSelchangeLanguage();
+	afx_msg void OnDisableToolbar();
+	afx_msg void OnChangeUOTitle();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 
