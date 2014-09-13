@@ -184,7 +184,8 @@ LRESULT CAxis2Dlg::DefWindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 		if (wParam == SC_MINIMIZE)
 		{
 			this->ShowWindow(SW_HIDE);
-			Main->m_dlgToolBar->ShowWindow(SW_SHOWNORMAL);
+			if (!Main->m_dwDisableToolbar)
+				Main->m_dlgToolBar->ShowWindow(SW_SHOWNORMAL);
 			return TRUE;
 		}
 	}

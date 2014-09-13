@@ -355,7 +355,17 @@
  
  
  
-  ***Version 2.0.4i***
+ ***Version 2.0.4i***
  
  +April 27, 2013+
  -Fixed: wrong code in UOP Art support (Now it works good :)
+ 
+ 
+ 
+ ***Version 2.0.4j***
+ 
+ +September 13, 2014+
+ -Fixed: Typo in eng.lng
+ -Removed: Incomplete language selection option from the settings
+ -Added: Disable toolbar mode option on the general settings tab to disable the toolbar mode when minimized.
+ -Added: Custom Client Title option in general settings to allow for custom client titles to be recognised by Axis.

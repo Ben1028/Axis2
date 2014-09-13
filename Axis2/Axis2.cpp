@@ -88,6 +88,7 @@ BOOL CAxis2App::InitInstance()
 		m_log.Add(0,CMsg("IDS_LOADREGISTRY"));
 		m_dwAllowMultiple = GetRegistryDword("AllowMultipleInstances", m_dwAllowMultiple);
 		m_dwAlwaysOnTop = GetRegistryDword("AlwaysOnTop", m_dwAlwaysOnTop);
+		m_dwDisableToolbar = GetRegistryDword("DisableToolbar", m_dwDisableToolbar);
 		m_dwDrawDifs = GetRegistryDword("DrawDifs", m_dwDrawDifs);
 		m_dwDrawStatics = GetRegistryDword("DrawStatics", m_dwDrawStatics);
 		m_dwLoadDefault = GetRegistryDword("LoadDefault", m_dwLoadDefault);
@@ -95,7 +96,7 @@ BOOL CAxis2App::InitInstance()
 		m_dwRoomView = GetRegistryDword("RoomView", m_dwRoomView);
 		m_dwSameAsClient = GetRegistryDword("SameAsCLient", m_dwSameAsClient);
 		m_dwStartTab = GetRegistryDword("StartTab", m_dwStartTab);
-		m_dwSysClose = GetRegistryDword("SysClose", m_dwSysClose);//
+		m_dwSysClose = GetRegistryDword("SysClose", m_dwSysClose);
 		m_dwInitiallize = GetRegistryDword("Initallize", 1);
 		m_dwShowSpawnpoints = GetRegistryDword("ShowSpawnpoints", m_dwShowSpawnpoints);
 		m_dwNPCSpawnColor = GetRegistryDword("NPCSpawnColor", m_dwNPCSpawnColor);
@@ -105,7 +106,8 @@ BOOL CAxis2App::InitInstance()
 		m_dwShowItems = GetRegistryDword("ShowItems", m_dwShowItems);
 		m_dwShowNPCs = GetRegistryDword("ShowNPCs", m_dwShowNPCs);
 		m_dwShowMap = GetRegistryDword("ShowMap", m_dwShowMap);
-		m_csCommandPrefix = GetRegistryString("CommandPrefix", m_csCommandPrefix);//
+		m_csCommandPrefix = GetRegistryString("CommandPrefix", m_csCommandPrefix);
+		m_csUOTitle = GetRegistryString("UOTitle", m_csUOTitle);
 	}
 	RegCloseKey(hKey);
 
@@ -1132,6 +1134,8 @@ bool CAxis2App::LoadIni(int iLoadPart, CString csLoadString)
 											m_dwAllowMultiple = atoi(csValue);
 										if (csSetting == "AlwaysOnTop")
 											m_dwAlwaysOnTop = atoi(csValue);
+										if (csSetting == "DisableToolbar")
+											m_dwDisableToolbar = atoi(csValue);
 										if (csSetting == "DrawDifs")
 											m_dwDrawDifs = atoi(csValue);
 										if (csSetting == "DrawStatics")
@@ -1166,6 +1170,8 @@ bool CAxis2App::LoadIni(int iLoadPart, CString csLoadString)
 											m_dwShowMap = atoi(csValue);
 										if (csSetting == "CommandPrefix")
 											m_csCommandPrefix = csValue;
+										if (csSetting == "UOTitle")
+											m_csUOTitle = csValue;
 										if (csSetting == "RegInstallation")
 										{
 											if ( csValue == "Machine")

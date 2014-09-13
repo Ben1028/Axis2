@@ -259,6 +259,7 @@
 #define IDC_STATICDIR                   1038
 #define IDC_PAGELIST                    1038
 #define IDC_RESETPATH                   1038
+#define IDC_DISABLE_TOOLBAR             1038
 #define IDC_DRAWSTATICS                 1039
 #define IDC_STATICURL                   1039
 #define IDC_PAGEDELETE                  1039
@@ -374,6 +375,8 @@
 #define IDC_ITEMSETMISC                 1064
 #define IDC_SLIDERVALUE                 1064
 #define IDC_MUSIC_LIST                  1064
+#define IDC_PREFIX2                     1064
+#define IDC_UOTITLE                     1064
 #define IDC_SAVEPARITY                  1065
 #define IDC_ITEMSETTAG                  1065
 #define IDC_PWD                         1066

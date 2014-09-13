@@ -102,8 +102,8 @@ IDI_MISC                ICON                    "res\\Diagram.ico"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2,0,4,9
- PRODUCTVERSION 2,0,4,9
+ FILEVERSION 2,0,4,10
+ PRODUCTVERSION 2,0,4,10
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x21L
@@ -119,12 +119,12 @@ BEGIN
         BLOCK "040904b0"
         BEGIN
             VALUE "FileDescription", "Axis2 MFC Application"
-            VALUE "FileVersion", "2.0.4i"
+            VALUE "FileVersion", "2.0.4j"
             VALUE "InternalName", "Axis2"
             VALUE "LegalCopyright", "Copyright (C) 2006"
             VALUE "OriginalFilename", "Axis2.EXE"
             VALUE "ProductName", "Axis2 Application"
-            VALUE "ProductVersion", "2.0.4i"
+            VALUE "ProductVersion", "2.0.4j"
             VALUE "SpecialBuild", "Pre-Release"
         END
     END
@@ -464,11 +464,11 @@ BEGIN
         LEFTMARGIN, 7
         RIGHTMARGIN, 227
         VERTGUIDE, 12
+        VERTGUIDE, 137
         VERTGUIDE, 181
         TOPMARGIN, 7
         BOTTOMMARGIN, 87
         HORZGUIDE, 11
-        HORZGUIDE, 60
         HORZGUIDE, 79
     END
 
@@ -1237,13 +1237,14 @@ BEGIN
     CONTROL         "Load default profile on startup",IDC_LOADDEFAULT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,44,109,10
     LTEXT           "Start with",-1,12,56,30,8,NOT WS_GROUP
     COMBOBOX        IDC_STARTTAB,44,54,76,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    LTEXT           "tab",-1,121,56,11,8,NOT WS_GROUP
-    PUSHBUTTON      "Reset All Settings",IDC_RESETSTING,153,60,57,19,BS_MULTILINE
-    PUSHBUTTON      "Reset General Settings",IDC_RESET_GENERAL,153,38,57,19,BS_MULTILINE
+    LTEXT           "tab",-1,122,56,11,8,NOT WS_GROUP
+    PUSHBUTTON      "Reset All Settings",IDC_RESETSTING,141,64,80,15,BS_MULTILINE
+    PUSHBUTTON      "Reset General Settings",IDC_RESET_GENERAL,141,48,80,15,BS_MULTILINE
     LTEXT           "Command Prefix",-1,12,72,54,8,NOT WS_GROUP
     EDITTEXT        IDC_PREFIX,69,70,17,13,ES_CENTER | ES_AUTOHSCROLL
-    COMBOBOX        IDC_LANGUAGE,143,22,76,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    CTEXT           "Default Language",-1,144,11,73,8,NOT WS_GROUP
+    CONTROL         "Disable toolbar mode",IDC_DISABLE_TOOLBAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,137,11,90,10
+    EDITTEXT        IDC_UOTITLE,137,32,90,13,ES_AUTOHSCROLL
+    LTEXT           "Custom Client Title",-1,150,22,63,8,NOT WS_GROUP
 END
 
 IDD_SETTING_TRAVEL DIALOGEX 0, 0, 234, 94
@@ -1460,10 +1461,6 @@ BEGIN
 0x6552, 0x696d, 0x646e, 0x7265, "\000" 
     IDC_STARTTAB, 0x403, 5, 0
 0x6f4c, 0x7367, "\000" 
-    IDC_LANGUAGE, 0x403, 8, 0
-0x6e45, 0x6c67, 0x7369, 0x0068, 
-    IDC_LANGUAGE, 0x403, 8, 0
-0x4620, 0x6572, 0x636e, 0x0068, 
     0
 END
 
@@ -1547,7 +1544,7 @@ BEGIN
     IDS_LICENCE3            "You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA"
     IDS_COPY1               "© 2006 - %1!d!  Benoit Croussette"
     IDS_COPY2               "Built on %1"
-    IDS_COPY3               "For use with Sphereserver %1"
+    IDS_COPY3               "For use with Sphereserver %1+"
     IDS_COPY4               "Based on code from the original Axis by:"
     IDS_COPY5               "© 1998-2003 Philip A. Esterle + parts © 2002 Adron"
     IDS_COPY6               "© 2004-2005 Ben C, 55rx / 56x mods"
