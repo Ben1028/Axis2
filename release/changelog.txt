@@ -382,3 +382,4 @@
  -Added: Error logging for faulty scripts
  -Added: AOS Art&Tiledata Support
  -Added: Partial Hue Item Preview
+ -Fixed: Client window lookup with empty custom client title should work now and will not find an empty title system window.

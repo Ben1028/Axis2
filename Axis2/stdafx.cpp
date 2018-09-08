@@ -57,7 +57,7 @@ BOOL CALLBACK EnumWindowsProc(HWND hWnd, LPARAM lParam)
 	pWnd->GetWindowText(csTitle);
 	if ( lParam )
 	{
-		if ((csTitle.Find("Ultima Online") != -1) || (csTitle.Find("UOSA") != -1) || (csTitle.Find(Main->m_csUOTitle) != -1))
+		if ((csTitle.Find("Ultima Online") != -1) || (csTitle.Find("UOSA") != -1) || (Main->m_csUOTitle.GetLength() > 0 && (csTitle.Find(Main->m_csUOTitle) != -1)))
 		{
 			hwndUOClient = hWnd;
 			return FALSE;
