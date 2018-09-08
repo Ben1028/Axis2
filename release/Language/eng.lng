@@ -6,7 +6,7 @@ IDS_ADDDESTINATION=Custom Destination Editor
 IDS_ADMIN=Admin
 IDS_ALLMOVE=Allmove
 IDS_AXIS_PROFILE=<Axis Profile>
-IDS_AXIS_VERSION=Axis2 v%1 (Alathair Mod)
+IDS_AXIS_VERSION=Axis2 version %1
 IDS_AXISTITLE=%1 - Press F1 for Help
 
 IDS_BAN=Ban
