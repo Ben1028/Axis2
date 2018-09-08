@@ -481,6 +481,29 @@ int CScriptArray::Find(CString csName)
 	return -1;
 }
 
+int CScriptArray::FindSimilar(CTObject * pScript)
+{
+	if ( this->GetSize() == 0 )
+		return -1;
+
+	INT_PTR iLower = 0;
+	INT_PTR iUpper = this->GetUpperBound();
+	INT_PTR iIndex = 0;
+	while ( iLower <= iUpper )
+	{
+		iIndex = (iUpper + iLower ) / 2;
+		CSObject * pTest = (CSObject *) this->GetAt(iIndex);
+		CString csExisting = pTest->m_csValue;
+		if ( csExisting.CompareNoCase(pScript->m_csValue) == 0 && pScript->m_bType == pTest->m_bType )
+				return (int)iIndex;
+		if ( csExisting.CompareNoCase(pScript->m_csValue) > 0 )
+			iUpper = iIndex - 1;
+		else
+			iLower = iIndex + 1;
+	}
+	return -1;
+}
+
 int CScriptArray::Insert(CTObject * pScript)
 {
 	if (( pScript->m_csValue == "" )&&( !pScript->m_bCustom ))

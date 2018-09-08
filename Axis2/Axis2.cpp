@@ -165,12 +165,11 @@ BOOL CAxis2App::InitInstance()
 	csProfilePath = GetRegistryString("Default ProfilePath", "");
 	if ( csProfilePath == "" )
 	{
-		CString pathSelected;
-		CFolderDialog dlgfolder(&pathSelected, CMsg("IDS_DEFAULT_PROFILE_FOLDER"));
-		if (dlgfolder.DoModal() == IDOK)
+		TCHAR pathSelected[MAX_PATH];
+		if(GetPathDlg(NULL, pathSelected, CMsg("IDS_DEFAULT_PROFILE_FOLDER")) == TRUE)
 			csProfilePath = pathSelected;
 		else
-			csProfilePath = "C:/Sphere";
+			csProfilePath = "C:\\Sphere";
 		PutRegistryString("Default ProfilePath", csProfilePath);
 		PutRegistryString("Last Profile Loaded", CMsg("IDS_AXIS_PROFILE"));
 	}
@@ -296,7 +295,11 @@ BOOL CAxis2App::InitInstance()
 	{
 		dlg.OnOpenSettingsPage(0);
 		PutRegistryDword("Initallize", 0);
-		PutRegistryString("Default Profile", CMsg("IDS_AXIS_PROFILE"));
+		csProfilePath = GetRegistryString("Default ProfilePath", "");
+		if (csProfilePath == "") 
+		{
+			PutRegistryString("Default Profile", CMsg("IDS_AXIS_PROFILE"));
+		}
 	}
 #endif
 
@@ -917,7 +920,7 @@ void CAxis2App::LoadSounds()
 					{
 						cfSoundmul.Seek(pSound->dwStart,CFile::begin);
 						cfSoundmul.Read( &cName, 32 );
-						cName[32] = 0x00;
+						cName[31] = 0x00;
 						CString csName = cName;
 						csName = csName.SpanExcluding(".");
 						pSound->csName = csName;

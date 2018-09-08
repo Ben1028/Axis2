@@ -319,10 +319,11 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 
 								csLine = pItem->ReadBlock(*pFile);
 
-								int iOld = m_aItems.Find(pItem->m_csValue);
+								int iOld = m_aItems.FindSimilar(pItem); // Similar lookup respects type. This is required since items and multis share thier id range.
 								if ( iOld != -1 )
 								{
 									CSObject * pOld = (CSObject *) m_aItems.GetAt(iOld);
+									Main->m_log.Add(1, CFMsg(CMsg("IDS_ID_DUPLICATE_ITEM"), pItem->m_csID, pItem->m_csDisplay));
 									m_aItems.RemoveAt(iOld);
 									delete pOld;
 								}
@@ -340,10 +341,11 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 
 								csLine = pItem->ReadBlock(*pFile);
 
-								int iOld = m_aItems.Find(pItem->m_csValue);
+								int iOld = m_aItems.FindSimilar(pItem); // Similar lookup respects type. This is required since items and multis share thier id range.
 								if ( iOld != -1 )
 								{
 									CSObject * pOld = (CSObject *) m_aItems.GetAt(iOld);
+									Main->m_log.Add(1, CFMsg(CMsg("IDS_ID_DUPLICATE_MULTI"), pItem->m_csID, pItem->m_csDisplay));
 									m_aItems.RemoveAt(iOld);
 									delete pOld;
 								}
@@ -365,6 +367,7 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 								if ( iOld != -1 )
 								{
 									CSObject * pOld = (CSObject *) m_aItems.GetAt(iOld);
+									Main->m_log.Add(1, CFMsg(CMsg("IDS_ID_DUPLICATE_TEMPLATE"), pTempl->m_csID, pTempl->m_csDisplay));
 									m_aItems.RemoveAt(iOld);
 									delete pOld;
 								}
@@ -386,6 +389,7 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 								if ( iOld != -1 )
 								{
 									CSObject * pOld = (CSObject *) m_aNPCs.GetAt(iOld);
+									Main->m_log.Add(1, CFMsg(CMsg("IDS_ID_DUPLICATE_CHAR"), pNPC->m_csID, pNPC->m_csDisplay));
 									m_aNPCs.RemoveAt(iOld);
 									delete pOld;
 								}
@@ -407,6 +411,7 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 								if ( iOld != -1 )
 								{
 									CSObject * pOld = (CSObject *) m_aNPCs.GetAt(iOld);
+									Main->m_log.Add(1, CFMsg(CMsg("IDS_ID_DUPLICATE_SPAWN"), pSpawn->m_csID, pSpawn->m_csDisplay));
 									m_aNPCs.RemoveAt(iOld);
 									delete pOld;
 								}
@@ -430,6 +435,7 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 								if ( iOld != -1 )
 								{
 									CSObject * pOld = (CSObject *) m_aAreas.GetAt(iOld);
+									Main->m_log.Add(1, CFMsg(CMsg("IDS_ID_DUPLICATE_LOCATION"), pArea->m_csID, pArea->m_csValue));
 									m_aAreas.RemoveAt(iOld);
 									delete pOld;
 								}
@@ -595,6 +601,7 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 								if ( iOld != -1 )
 								{
 									CSObject * pOld = (CSObject *) m_aSpellList.GetAt(iOld);
+									Main->m_log.Add(1, CFMsg(CMsg("IDS_ID_DUPLICATE_SPELL"), pSpell->m_csID, pSpell->m_csDisplay));
 									m_aSpellList.RemoveAt(iOld);
 									delete pOld;
 								}
@@ -716,7 +723,7 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 												CStdioFile * pLoadFile = new CStdioFile;
 												if ( !pLoadFile->Open(csLoadFile, CFile::modeRead | CFile::shareDenyNone) )
 												{
-													Main->m_log.Add(1,"ERROR: Unable to open file %s", csLoadFile);
+													Main->m_log.Add(1, CFMsg(CMsg("IDS_WARNING_NOOPEN"), csLoadFile));
 													continue;
 												}
 												LoadFile(pLoadFile);
@@ -734,7 +741,7 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 							}
 							break;
 						default:
-							Main->m_log.Add(1,"Unknown section %s in file %s", csLine, csFile);
+							Main->m_log.Add(1, CFMsg(CMsg("IDS_WARNING_UNKNOWN_SECTION"), csLine, csFile));
 							bStatus = pFile->ReadString(csLine);
 							break;
 						}

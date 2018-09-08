@@ -176,6 +176,8 @@ CFolderDialog::CFolderDialog(CString* pPath, CString csTitle) : CFileDialog(TRUE
 {
 	m_pPath = pPath;
 	m_Title = csTitle;
+
+	this->m_ofn.lpstrTitle = m_Title;
 }
 
 
@@ -231,6 +233,35 @@ void CFolderDialog::OnInitDone()
 	pFD->ScreenToClient(rectList2);
 	pFD->GetDlgItem(lst1)->SetWindowPos(0,0,0,rectList2.Width(), abs(rectList2.top - (rectCancel.top - 4)), SWP_NOMOVE | SWP_NOZORDER);
 	SetControlText(IDOK, _T("Select"));
-	pFD->SetWindowText(m_Title);
+	pFD->SetWindowText(m_Title);	
+	
 	m_wndProc = (WNDPROC)SetWindowLongPtr(pFD->m_hWnd, GWL_WNDPROC, (__int3264)(LONG_PTR)WindowProcNew);
+}
+
+BOOL GetPathDlg(HWND owner, TCHAR *dest, CString csTitle)
+{
+	TCHAR selectedPath[MAX_PATH];
+	BOOL ret = FALSE;
+	BROWSEINFO bi;
+	LPITEMIDLIST il;
+
+	CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+	memset(&bi, 0, sizeof(BROWSEINFO));
+	bi.hwndOwner = owner;
+	bi.lpszTitle = csTitle;
+	bi.ulFlags = BIF_USENEWUI;
+	il = SHBrowseForFolder(&bi);
+	if (il != NULL)
+	{
+		if (SHGetPathFromIDList(il, selectedPath))
+		{
+			_tcsncpy(dest, selectedPath, MAX_PATH);
+			ret = TRUE;
+		}
+		CoTaskMemFree(il);
+	}
+
+	CoUninitialize();
+
+	return ret;
 }

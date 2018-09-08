@@ -668,14 +668,9 @@ void CProfileDLG::OnCancelprofile()
 
 void CProfileDLG::OnDirbrowse() 
 {
-
-	CString pathSelected, m_csBaseDir;
-	CFolderDialog dlg(&pathSelected,"Choose folder");
-	m_ceBaseDir.GetWindowText(m_csBaseDir);
-	dlg.m_ofn.lpstrInitialDir = m_csBaseDir;
-	if (dlg.DoModal() == IDOK)
+	TCHAR pathSelected[MAX_PATH];
+	if (GetPathDlg(this->GetSafeHwnd(), pathSelected, _T("Choose folder")) == TRUE)
 		m_ceBaseDir.SetWindowText(pathSelected);
-	return;	
 }
 
 void CProfileDLG::OnLoadScripts()
