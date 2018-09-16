@@ -89,7 +89,7 @@ public:
 	CString GetBuildTimestamp();
 	CString GetRegistryString(CString csValue, CString csDefault = "", HKEY hMainKey = hRegLocation, CString csSubKey = REGKEY_AXIS);
 	CString m_csPosition;
-	CString m_csCurentProfile;
+	CString m_csCurrentProfile;
 	CString m_csRootDirectory;
 	CAdvStringArray pLng;
 	bool LoadLang();
@@ -157,6 +157,7 @@ public:
 	CAxis2App();
 	virtual ~CAxis2App();
 
+	CAxis2Dlg* m_pAxisMainWnd;
 	CAxisLog m_log;
 
 	CScriptObjects * m_pScripts;

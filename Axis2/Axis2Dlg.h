@@ -62,6 +62,8 @@ public:
 // Implementation
 public:
 	void UpdateTip();
+	void ReloadActiveTabPage();
+
 	NOTIFYICONDATA m_nid;
 	 CAxis2Dlg();
 	HICON m_hIcon;

@@ -68,7 +68,7 @@ BOOL CAxis2App::InitInstance()
 	m_pcppAxisLogTab->m_dcCurrentPage = m_pcppAxisLogTab;
 	m_pScripts = new CScriptObjects;
 	m_log.Add(0,CFMsg(CMsg("IDS_START"), Main->GetVersionTitle(), Main->GetBuildTimestamp()));
-	m_csCurentProfile = CMsg("IDS_NONE");
+	m_csCurrentProfile = CMsg("IDS_NONE");
 
 	//*******************************
 	// Load the Default settings
@@ -237,6 +237,7 @@ BOOL CAxis2App::InitInstance()
 	dlg.AddPage(m_pcppReminderTab);
 	dlg.AddPage(m_pcppAxisLogTab);
 
+	m_pAxisMainWnd = &dlg;
 	m_pMainWnd = &dlg;
 
 
@@ -704,8 +705,8 @@ void CAxis2App::UpdateProfileMenu()
 
 	if (pSubMenu)
 	{
-		pSubMenu->ModifyMenu(2,MF_BYPOSITION | MF_STRING,ID_PROFILES_UNLOAD,CFMsg(CMsg("IDS_UNLOAD_PROFILE"),m_csCurentProfile));
-		if (m_csCurentProfile == CMsg("IDS_NONE"))
+		pSubMenu->ModifyMenu(2,MF_BYPOSITION | MF_STRING,ID_PROFILES_UNLOAD,CFMsg(CMsg("IDS_UNLOAD_PROFILE"),m_csCurrentProfile));
+		if (m_csCurrentProfile == CMsg("IDS_NONE"))
 			pSubMenu->EnableMenuItem(2, MF_BYPOSITION | MF_GRAYED);
 		else
 			pSubMenu->EnableMenuItem(2, MF_BYPOSITION | MF_ENABLED);

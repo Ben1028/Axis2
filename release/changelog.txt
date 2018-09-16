@@ -374,7 +374,7 @@
  
  ***Version 2.0.?*** (ares@alathair.de)
  
- +September 08, 2018+
+ +September 16, 2018+
  -Fixed: sound.mul crash bug
  -Fixed: missing multis in item tab
  -Fixed/Replaced: Nonworking folder pickers.
@@ -383,3 +383,7 @@
  -Added: AOS Art&Tiledata Support
  -Added: Partial Hue Item Preview
  -Fixed: Client window lookup with empty custom client title should work now and will not find an empty title system window.
+ -Fixed: Dupeitems should not appear anymore for corresponding multi ids.
+ -Added: Categories starting with '$' will be ignored and not be shown in any list.
+ -Fixed: More usefull debug hint for duplicate spells.
+ -Fixed: Active tab will be refreshed after loading/unloading a profile. So interacting with it will not cause crashes anymore.

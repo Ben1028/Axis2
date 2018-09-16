@@ -82,7 +82,7 @@ public:
 	~CScriptArray();
 	int Insert(CTObject * pScript);
 	int Find(CString csName);
-	int FindSimilar(CTObject * pScript);
+	int Find(CString csName, BYTE type);
 	CString GetDef(CString csName);
 };
 
