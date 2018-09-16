@@ -525,3 +525,5 @@ protected:
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
+
+BOOL GetPathDlg(HWND owner, TCHAR *dest, CString csTitle);

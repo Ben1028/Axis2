@@ -318,15 +318,22 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 								pItem->m_csFilename = csFile;	
 
 								csLine = pItem->ReadBlock(*pFile);
-
-								int iOld = m_aItems.Find(pItem->m_csValue);
-								if ( iOld != -1 )
+								if (pItem->m_csCategory.Find('$') == 0) // Hidden definition
 								{
-									CSObject * pOld = (CSObject *) m_aItems.GetAt(iOld);
-									m_aItems.RemoveAt(iOld);
-									delete pOld;
+									delete pItem;
 								}
-								m_aItems.Insert(pItem);
+								else
+								{
+									int iOld = m_aItems.Find(pItem->m_csValue, pItem->m_bType); // Similar lookup respects type. This is required since items and multis share thier id range.
+									if ( iOld != -1 )
+									{
+										CSObject * pOld = (CSObject *) m_aItems.GetAt(iOld);
+										Main->m_log.Add(1, CFMsg(CMsg("IDS_ID_DUPLICATE_ITEM"), pItem->m_csID, pItem->m_csDisplay));
+										m_aItems.RemoveAt(iOld);
+										delete pOld;
+									}
+									m_aItems.Insert(pItem);
+								}
 							}
 							break;
 						case RES_MULTIDEF:
@@ -339,15 +346,22 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 								pItem->m_csFilename = csFile;	
 
 								csLine = pItem->ReadBlock(*pFile);
-
-								int iOld = m_aItems.Find(pItem->m_csValue);
-								if ( iOld != -1 )
+								if(pItem->m_csCategory.Find('$') == 0) // Hidden definition
 								{
-									CSObject * pOld = (CSObject *) m_aItems.GetAt(iOld);
-									m_aItems.RemoveAt(iOld);
-									delete pOld;
+									delete pItem;
 								}
-								m_aItems.Insert(pItem);
+								else 
+								{
+									int iOld = m_aItems.Find(pItem->m_csValue, pItem->m_bType); // Similar lookup respects type. This is required since items and multis share thier id range.
+									if (iOld != -1)
+									{
+										CSObject * pOld = (CSObject *)m_aItems.GetAt(iOld);
+										Main->m_log.Add(1, CFMsg(CMsg("IDS_ID_DUPLICATE_MULTI"), pItem->m_csID, pItem->m_csDisplay));
+										m_aItems.RemoveAt(iOld);
+										delete pOld;
+									}
+									m_aItems.Insert(pItem);
+								}
 							}
 							break;
 						case RES_TEMPLATE:
@@ -360,15 +374,22 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 								pTempl->m_csFilename = csFile;	
 
 								csLine = pTempl->ReadBlock(*pFile);
-
-								int iOld = m_aItems.Find(pTempl->m_csValue);
-								if ( iOld != -1 )
+								if (pTempl->m_csCategory.Find('$') == 0) // Hidden definition
 								{
-									CSObject * pOld = (CSObject *) m_aItems.GetAt(iOld);
-									m_aItems.RemoveAt(iOld);
-									delete pOld;
+									delete pTempl;
 								}
-								m_aItems.Insert(pTempl);
+								else
+								{
+									int iOld = m_aItems.Find(pTempl->m_csValue);
+									if (iOld != -1)
+									{
+										CSObject * pOld = (CSObject *)m_aItems.GetAt(iOld);
+										Main->m_log.Add(1, CFMsg(CMsg("IDS_ID_DUPLICATE_TEMPLATE"), pTempl->m_csID, pTempl->m_csDisplay));
+										m_aItems.RemoveAt(iOld);
+										delete pOld;
+									}
+									m_aItems.Insert(pTempl);
+								}
 							}
 							break;
 						case RES_CHARDEF:
@@ -381,15 +402,22 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 								pNPC->m_csFilename = csFile;
 
 								csLine = pNPC->ReadBlock(*pFile);
-
-								int iOld = m_aNPCs.Find(pNPC->m_csValue);
-								if ( iOld != -1 )
+								if (pNPC->m_csCategory.Find('$') == 0) // Hidden definition
 								{
-									CSObject * pOld = (CSObject *) m_aNPCs.GetAt(iOld);
-									m_aNPCs.RemoveAt(iOld);
-									delete pOld;
+									delete pNPC;
 								}
-								m_aNPCs.Insert(pNPC);
+								else
+								{
+									int iOld = m_aNPCs.Find(pNPC->m_csValue);
+									if (iOld != -1)
+									{
+										CSObject * pOld = (CSObject *)m_aNPCs.GetAt(iOld);
+										Main->m_log.Add(1, CFMsg(CMsg("IDS_ID_DUPLICATE_CHAR"), pNPC->m_csID, pNPC->m_csDisplay));
+										m_aNPCs.RemoveAt(iOld);
+										delete pOld;
+									}
+									m_aNPCs.Insert(pNPC);
+								}
 							}
 							break;
 						case RES_SPAWN:
@@ -402,15 +430,22 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 								pSpawn->m_csFilename = csFile;
 
 								csLine = pSpawn->ReadBlock(*pFile);
-
-								int iOld = m_aNPCs.Find(pSpawn->m_csValue);
-								if ( iOld != -1 )
+								if (pSpawn->m_csCategory.Find('$') == 0) // Hidden definition
 								{
-									CSObject * pOld = (CSObject *) m_aNPCs.GetAt(iOld);
-									m_aNPCs.RemoveAt(iOld);
-									delete pOld;
+									delete pSpawn;
 								}
-								m_aNPCs.Insert(pSpawn);
+								else
+								{
+									int iOld = m_aNPCs.Find(pSpawn->m_csValue);
+									if (iOld != -1)
+									{
+										CSObject * pOld = (CSObject *)m_aNPCs.GetAt(iOld);
+										Main->m_log.Add(1, CFMsg(CMsg("IDS_ID_DUPLICATE_SPAWN"), pSpawn->m_csID, pSpawn->m_csDisplay));
+										m_aNPCs.RemoveAt(iOld);
+										delete pOld;
+									}
+									m_aNPCs.Insert(pSpawn);
+								}
 							}
 							break;
 						case RES_AREA:
@@ -425,15 +460,22 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 								pArea->m_csFilename = csFile;
 
 								csLine = pArea->ReadBlock(*pFile);
-
-								int iOld = m_aAreas.Find(pArea->m_csValue);
-								if ( iOld != -1 )
+								if (pArea->m_csCategory.Find('$') == 0) // Hidden definition
 								{
-									CSObject * pOld = (CSObject *) m_aAreas.GetAt(iOld);
-									m_aAreas.RemoveAt(iOld);
-									delete pOld;
+									delete pArea;
 								}
-								m_aAreas.Insert(pArea);
+								else
+								{
+									int iOld = m_aAreas.Find(pArea->m_csValue);
+									if (iOld != -1)
+									{
+										CSObject * pOld = (CSObject *)m_aAreas.GetAt(iOld);
+										Main->m_log.Add(1, CFMsg(CMsg("IDS_ID_DUPLICATE_LOCATION"), pArea->m_csID, pArea->m_csValue));
+										m_aAreas.RemoveAt(iOld);
+										delete pOld;
+									}
+									m_aAreas.Insert(pArea);
+								}
 							}
 							break;
 						case RES_DEFNAME:
@@ -595,6 +637,7 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 								if ( iOld != -1 )
 								{
 									CSObject * pOld = (CSObject *) m_aSpellList.GetAt(iOld);
+									Main->m_log.Add(1, CFMsg(CMsg("IDS_ID_DUPLICATE_SPELL"), pSpell->m_csID, pSpell->m_csValue));
 									m_aSpellList.RemoveAt(iOld);
 									delete pOld;
 								}
@@ -716,7 +759,7 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 												CStdioFile * pLoadFile = new CStdioFile;
 												if ( !pLoadFile->Open(csLoadFile, CFile::modeRead | CFile::shareDenyNone) )
 												{
-													Main->m_log.Add(1,"ERROR: Unable to open file %s", csLoadFile);
+													Main->m_log.Add(1, CFMsg(CMsg("IDS_WARNING_NOOPEN"), csLoadFile));
 													continue;
 												}
 												LoadFile(pLoadFile);
@@ -734,7 +777,7 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 							}
 							break;
 						default:
-							Main->m_log.Add(1,"Unknown section %s in file %s", csLine, csFile);
+							Main->m_log.Add(1, CFMsg(CMsg("IDS_WARNING_UNKNOWN_SECTION"), csLine, csFile));
 							bStatus = pFile->ReadString(csLine);
 							break;
 						}
@@ -769,7 +812,7 @@ bool CScriptObjects::LoadFile(CStdioFile * pFile, bool bResource, bool bProgress
 void CScriptObjects::LoadQuicklist(CString csList, CScriptArray * pObjList, CScriptArray * pDestList)
 {
 	CString csKey;
-	csKey.Format("%s\\%s\\Quicklist",REGKEY_PROFILE, Main->m_csCurentProfile);
+	csKey.Format("%s\\%s\\Quicklist",REGKEY_PROFILE, Main->m_csCurrentProfile);
 	CStringArray csaList;
 	Main->GetRegistryMultiSz(csList, &csaList, hRegLocation, csKey);
 
@@ -804,7 +847,7 @@ void CScriptObjects::LoadQuicklist(CString csList, CScriptArray * pObjList, CScr
 
 void CScriptObjects::LoadProfile(CString csProfile)
 {
-		Main->m_csCurentProfile = csProfile;
+		Main->m_csCurrentProfile = csProfile;
 
 		//No Profile
 		if (csProfile == "<None>")
@@ -826,6 +869,7 @@ void CScriptObjects::LoadProfile(CString csProfile)
 			LoadQuicklist("Spawns", &m_aNPCs, &m_SpawnQuickList);
 			LoadQuicklist("Area", &m_aAreas, &m_AreaQuickList);
 			DestroyProgressDialog();
+			Main->m_pAxisMainWnd->ReloadActiveTabPage();
 			return;
 		}
 
@@ -864,6 +908,7 @@ void CScriptObjects::LoadProfile(CString csProfile)
 			LoadQuicklist("Spawns", &m_aNPCs, &m_SpawnQuickList);
 			LoadQuicklist("Area", &m_aAreas, &m_AreaQuickList);
 			DestroyProgressDialog();
+			Main->m_pAxisMainWnd->ReloadActiveTabPage();
 			return;
 		}
 
@@ -1096,6 +1141,7 @@ void CScriptObjects::LoadProfile(CString csProfile)
 			LoadQuicklist("Spawns", &m_aNPCs, &m_SpawnQuickList);
 			LoadQuicklist("Area", &m_aAreas, &m_AreaQuickList);
 			DestroyProgressDialog();
+			Main->m_pAxisMainWnd->ReloadActiveTabPage();
 		}
 }
 
@@ -1192,6 +1238,7 @@ void CScriptObjects::UnloadProfile()
 {
 	delete Main->m_pScripts;
 	Main->m_pScripts = new CScriptObjects;
+	Main->m_pAxisMainWnd->ReloadActiveTabPage();
 }
 
 void CScriptObjects::Unload(CScriptArray * pObjList)
@@ -1274,9 +1321,9 @@ void CScriptObjects::CategorizeObjects(CScriptArray * pObjList, CPtrList * pCatL
 		{
 			if ( pItem->m_csDupeItem != "" )
 			{
-				int iIndex = pObjList->Find(pItem->m_csDupeItem);
+				int iIndex = pObjList->Find(pItem->m_csDupeItem, TYPE_ITEM); // only match dupes for !items!
 				if ( iIndex == -1 )
-					iIndex = pObjList->Find(pObjList->GetDef(pItem->m_csDupeItem));
+					iIndex = pObjList->Find(pObjList->GetDef(pItem->m_csDupeItem), TYPE_ITEM); // only match dupes for !items!
 				if ( iIndex != -1 )
 				{
 					CSObject * pDupe = (CSObject *) pObjList->GetAt(iIndex);
