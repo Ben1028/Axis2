@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="INI Files">
+      <UniqueIdentifier>{bdfc3a35-9d77-4345-a95c-b85dea1229b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="INI Files\Language">
+      <UniqueIdentifier>{c8a15509-db12-47fa-8350-584b3f90d652}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script Files">
+      <UniqueIdentifier>{ac78c3fc-d036-4791-b338-c0baf1df105f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Help">
+      <UniqueIdentifier>{1c8dcc4d-cd0f-4167-83e7-a21e7f8a8636}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Help\Main">
+      <UniqueIdentifier>{40e276ca-10d6-4336-9cbb-2acfb9bc5b90}</UniqueIdentifier>
+      <Extensions>hhp;hhc;hhk;gif;jpg</Extensions>
+    </Filter>
+    <Filter Include="Help\Images">
+      <UniqueIdentifier>{629bc873-cf52-4514-a609-b29d80623397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Help\Topics">
+      <UniqueIdentifier>{290170ae-014d-4518-812b-d0b50354bfe2}</UniqueIdentifier>
+      <Extensions>htm;html</Extensions>
+    </Filter>
+    <Filter Include="Extras">
+      <UniqueIdentifier>{43d4184f-d7f5-40bd-b030-22e45ae686be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tabs">
+      <UniqueIdentifier>{004f12a8-62a3-4b1e-8ce6-126fa30cfb2b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AboutDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Adddestination.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Axis2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Axis2Dlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AxisLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AxisThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorSelectionDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DockingPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DoorWizard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LightWizard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Profile_DLG.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgressBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Reminder_DLG.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteConsole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteConsoleDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteConsoleLoginDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteProfileLoginDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptEditorFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptObjects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchCritDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings_General.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings_Item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings_OverridePaths.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings_Paths.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings_Spawn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings_Travel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingsDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UOart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UOmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BtnST.cpp">
+      <Filter>Extras</Filter>
+    </ClCompile>
+    <ClCompile Include="Ini.cpp">
+      <Filter>Extras</Filter>
+    </ClCompile>
+    <ClCompile Include="Random.cpp">
+      <Filter>Extras</Filter>
+    </ClCompile>
+    <ClCompile Include="TabCtrl.cpp">
+      <Filter>Extras</Filter>
+    </ClCompile>
+    <ClCompile Include="AccountTab.cpp">
+      <Filter>Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandsTab.cpp">
+      <Filter>Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneralTab.cpp">
+      <Filter>Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemTab.cpp">
+      <Filter>Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemTweakTab.cpp">
+      <Filter>Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="LauncherTab.cpp">
+      <Filter>Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="LogTab.cpp">
+      <Filter>Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="MiscTab.cpp">
+      <Filter>Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerTweakTab.cpp">
+      <Filter>Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="ReminderTab.cpp">
+      <Filter>Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnTab.cpp">
+      <Filter>Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="TravelTab.cpp">
+      <Filter>Tabs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AboutDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Adddestination.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Axis2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Axis2Dlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AxisLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AxisThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorSelectionDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DockingPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DoorWizard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LightWizard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Multiview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Profile_DLG.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgressBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Reminder_DLG.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteConsole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteConsoleDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteConsoleLoginDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteProfileLoginDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptEditorFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptObjects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SearchCritDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings_General.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings_Item.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings_OverridePaths.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings_Paths.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings_Spawn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings_Travel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingsDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UOart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UOmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BtnST.h">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="Ini.h">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="TabCtrl.h">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountTab.h">
+      <Filter>Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandsTab.h">
+      <Filter>Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneralTab.h">
+      <Filter>Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemTab.h">
+      <Filter>Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemTweakTab.h">
+      <Filter>Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="LauncherTab.h">
+      <Filter>Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="LogTab.h">
+      <Filter>Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="MiscTab.h">
+      <Filter>Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerTweakTab.h">
+      <Filter>Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="ReminderTab.h">
+      <Filter>Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnTab.h">
+      <Filter>Tabs</Filter>
+    </ClInclude>
+    <ClInclude Include="TravelTab.h">
+      <Filter>Tabs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Alarm clock.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Application.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\arrowlef.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Axis2.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Boss.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\commands.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Diagram.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\doc1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Door.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\downarro.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Earth.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\EditDoor.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\EditPeople.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\find.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\folder.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Home.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ico00001.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ico00002.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Key.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Notes.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\palette.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\People.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Question.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\sarrowdo.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\sarrowle.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\sarrowri.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\sarrowup.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\uparrow.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Zoom.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\zoomin.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\zoomout.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="hlp\find.PNG">
+      <Filter>Help\Images</Filter>
+    </Image>
+    <Image Include="hlp\palette.PNG">
+      <Filter>Help\Images</Filter>
+    </Image>
+    <Image Include="hlp\world.PNG">
+      <Filter>Help\Images</Filter>
+    </Image>
+    <Image Include="hlp\zoomin.PNG">
+      <Filter>Help\Images</Filter>
+    </Image>
+    <Image Include="hlp\zoomout.PNG">
+      <Filter>Help\Images</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Axis2.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\Axis2.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\release\Axis2.ini">
+      <Filter>INI Files</Filter>
+    </None>
+    <None Include="..\release\DoorWiz.ini">
+      <Filter>INI Files</Filter>
+    </None>
+    <None Include="..\release\LightWiz.ini">
+      <Filter>INI Files</Filter>
+    </None>
+    <None Include="..\release\Language\eng.lng">
+      <Filter>INI Files\Language</Filter>
+    </None>
+    <None Include="..\release\hoglocs.scp">
+      <Filter>Script Files</Filter>
+    </None>
+    <None Include="hlp\Axis2.hhc">
+      <Filter>Help\Main</Filter>
+    </None>
+    <None Include="hlp\Axis2.hhk">
+      <Filter>Help\Main</Filter>
+    </None>
+    <None Include="hlp\Account_Tab.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Add_Location.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Axis2_ini.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Color_Select.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Command_Tab.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\DoorWiz.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\DoorWiz_ini.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\General_Tab.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Item_Tab.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\ItemTweak_Tab.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Launcher_Tab.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\LightWiz.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\LightWiz_ini.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Local_Profile.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Log_Tab.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\PlayerTweak_Tab.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Profile_Login.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Profile_Tab.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Remote_Console.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Remote_Console_Login.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Search.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Setting_Tab.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Spawn_Tab.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Travel_Tab.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Web_Profile.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Web_Profile_Setup.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="hlp\Welcome.htm">
+      <Filter>Help\Topics</Filter>
+    </None>
+    <None Include="..\release\LICENSE" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\release\changelog.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="hlp\Axis2.hhp">
+      <Filter>Help\Main</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

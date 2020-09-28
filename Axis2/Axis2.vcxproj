@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{72C4A629-C937-46FC-A0AB-731CBCD467AE}</ProjectGuid>
+    <RootNamespace>Axis2</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.30427.251</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_AXIS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>version.lib;Vfw32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AXIS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)vc80.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>version.lib;Vfw32.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AllowIsolation>true</AllowIsolation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AboutDlg.cpp" />
+    <ClCompile Include="AccountTab.cpp" />
+    <ClCompile Include="Adddestination.cpp" />
+    <ClCompile Include="Axis2.cpp" />
+    <ClCompile Include="Axis2Dlg.cpp" />
+    <ClCompile Include="AxisLog.cpp" />
+    <ClCompile Include="AxisThread.cpp" />
+    <ClCompile Include="BtnST.cpp" />
+    <ClCompile Include="ClientInfo.cpp" />
+    <ClCompile Include="ColorSelectionDlg.cpp" />
+    <ClCompile Include="CommandsTab.cpp" />
+    <ClCompile Include="Common.cpp" />
+    <ClCompile Include="DockingPage.cpp" />
+    <ClCompile Include="DoorWizard.cpp" />
+    <ClCompile Include="GeneralTab.cpp" />
+    <ClCompile Include="Ini.cpp" />
+    <ClCompile Include="ItemTab.cpp" />
+    <ClCompile Include="ItemTweakTab.cpp" />
+    <ClCompile Include="LauncherTab.cpp" />
+    <ClCompile Include="LightWizard.cpp" />
+    <ClCompile Include="LogTab.cpp" />
+    <ClCompile Include="MiscTab.cpp" />
+    <ClCompile Include="MultiView.cpp" />
+    <ClCompile Include="PlayerTweakTab.cpp" />
+    <ClCompile Include="Profile_DLG.cpp" />
+    <ClCompile Include="ProgressBar.cpp" />
+    <ClCompile Include="Random.cpp" />
+    <ClCompile Include="ReminderTab.cpp" />
+    <ClCompile Include="Reminder_DLG.cpp" />
+    <ClCompile Include="RemoteConsole.cpp" />
+    <ClCompile Include="RemoteConsoleDlg.cpp" />
+    <ClCompile Include="RemoteConsoleLoginDlg.cpp" />
+    <ClCompile Include="RemoteProfileLoginDlg.cpp" />
+    <ClCompile Include="ScriptEditor.cpp" />
+    <ClCompile Include="ScriptEditorFrame.cpp" />
+    <ClCompile Include="ScriptInfo.cpp" />
+    <ClCompile Include="ScriptObjects.cpp" />
+    <ClCompile Include="SearchCritDlg.cpp" />
+    <ClCompile Include="SettingsDlg.cpp" />
+    <ClCompile Include="Settings_General.cpp" />
+    <ClCompile Include="Settings_Item.cpp" />
+    <ClCompile Include="Settings_OverridePaths.cpp" />
+    <ClCompile Include="Settings_Paths.cpp" />
+    <ClCompile Include="Settings_Spawn.cpp" />
+    <ClCompile Include="Settings_Travel.cpp" />
+    <ClCompile Include="SpawnTab.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TabCtrl.cpp" />
+    <ClCompile Include="ToolBar.cpp" />
+    <ClCompile Include="TravelTab.cpp" />
+    <ClCompile Include="UOart.cpp" />
+    <ClCompile Include="UOmap.cpp" />
+    <ClCompile Include="WorldMap.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AboutDlg.h" />
+    <ClInclude Include="AccountTab.h" />
+    <ClInclude Include="Adddestination.h" />
+    <ClInclude Include="Axis2.h" />
+    <ClInclude Include="Axis2Dlg.h" />
+    <ClInclude Include="AxisLog.h" />
+    <ClInclude Include="AxisThread.h" />
+    <ClInclude Include="BtnST.h" />
+    <ClInclude Include="ClientInfo.h" />
+    <ClInclude Include="ColorSelectionDlg.h" />
+    <ClInclude Include="CommandsTab.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="DockingPage.h" />
+    <ClInclude Include="DoorWizard.h" />
+    <ClInclude Include="GeneralTab.h" />
+    <ClInclude Include="Ini.h" />
+    <ClInclude Include="ItemTab.h" />
+    <ClInclude Include="ItemTweakTab.h" />
+    <ClInclude Include="LauncherTab.h" />
+    <ClInclude Include="LightWizard.h" />
+    <ClInclude Include="LogTab.h" />
+    <ClInclude Include="MiscTab.h" />
+    <ClInclude Include="Multiview.h" />
+    <ClInclude Include="PlayerTweakTab.h" />
+    <ClInclude Include="Profile_DLG.h" />
+    <ClInclude Include="ProgressBar.h" />
+    <ClInclude Include="Random.h" />
+    <ClInclude Include="ReminderTab.h" />
+    <ClInclude Include="Reminder_DLG.h" />
+    <ClInclude Include="RemoteConsole.h" />
+    <ClInclude Include="RemoteConsoleDlg.h" />
+    <ClInclude Include="RemoteConsoleLoginDlg.h" />
+    <ClInclude Include="RemoteProfileLoginDlg.h" />
+    <CustomBuild Include="Resource.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating map file for help compiler...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">echo // Generated Help Map file.  Used by Axis2.HHP. &gt; "hlp\HTMLDefines.h"
+echo. &gt; "hlp\HTMLDefines.h"
+echo // Commands (ID_* and IDM_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h ID_,HID_,0x10000 IDM_,HIDM_,0x10000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Prompts (IDP_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDP_,HIDP_,0x30000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Resources (IDR_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDR_,HIDR_,0x20000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Dialogs (IDD_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDD_,HIDD_,0x20000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Frame Controls (IDW_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h /a afxhh.h IDW_,HIDW_,0x50000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">hlp\HTMLDefines.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating map file for help compiler...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">echo // Generated Help Map file.  Used by Axis2.HHP. &gt; "hlp\HTMLDefines.h"
+echo. &gt; "hlp\HTMLDefines.h"
+echo // Commands (ID_* and IDM_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h ID_,HID_,0x10000 IDM_,HIDM_,0x10000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Prompts (IDP_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDP_,HIDP_,0x30000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Resources (IDR_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDR_,HIDR_,0x20000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Dialogs (IDD_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDD_,HIDD_,0x20000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Frame Controls (IDW_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h /a afxhh.h IDW_,HIDW_,0x50000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">hlp\HTMLDefines.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="ScriptEditor.h" />
+    <ClInclude Include="ScriptEditorFrame.h" />
+    <ClInclude Include="ScriptInfo.h" />
+    <ClInclude Include="ScriptObjects.h" />
+    <ClInclude Include="SearchCritDlg.h" />
+    <ClInclude Include="SettingsDlg.h" />
+    <ClInclude Include="Settings_General.h" />
+    <ClInclude Include="Settings_Item.h" />
+    <ClInclude Include="Settings_OverridePaths.h" />
+    <ClInclude Include="Settings_Paths.h" />
+    <ClInclude Include="Settings_Spawn.h" />
+    <ClInclude Include="Settings_Travel.h" />
+    <ClInclude Include="SpawnTab.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TabCtrl.h" />
+    <ClInclude Include="ToolBar.h" />
+    <ClInclude Include="TravelTab.h" />
+    <ClInclude Include="UOart.h" />
+    <ClInclude Include="UOmap.h" />
+    <ClInclude Include="WorldMap.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="hlp\find.PNG" />
+    <Image Include="hlp\palette.PNG" />
+    <Image Include="hlp\world.PNG" />
+    <Image Include="hlp\zoomin.PNG" />
+    <Image Include="hlp\zoomout.PNG" />
+    <Image Include="res\Alarm clock.ico" />
+    <Image Include="res\Application.ico" />
+    <Image Include="res\arrowlef.ico" />
+    <Image Include="res\Axis2.ico" />
+    <Image Include="res\Boss.ico" />
+    <Image Include="res\commands.ico" />
+    <Image Include="res\Diagram.ico" />
+    <Image Include="res\doc1.ico" />
+    <Image Include="res\Door.ico" />
+    <Image Include="res\downarro.ico" />
+    <Image Include="res\Earth.ico" />
+    <Image Include="res\EditDoor.ico" />
+    <Image Include="res\EditPeople.ico" />
+    <Image Include="res\find.ico" />
+    <Image Include="res\folder.ico" />
+    <Image Include="res\Home.ico" />
+    <Image Include="res\ico00001.ico" />
+    <Image Include="res\ico00002.ico" />
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\Key.ico" />
+    <Image Include="res\Notes.ico" />
+    <Image Include="res\palette.ico" />
+    <Image Include="res\People.ico" />
+    <Image Include="res\Question.ico" />
+    <Image Include="res\sarrowdo.ico" />
+    <Image Include="res\sarrowle.ico" />
+    <Image Include="res\sarrowri.ico" />
+    <Image Include="res\sarrowup.ico" />
+    <Image Include="res\uparrow.ico" />
+    <Image Include="res\Zoom.ico" />
+    <Image Include="res\zoomin.ico" />
+    <Image Include="res\zoomout.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Axis2.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\release\Axis2.ini" />
+    <None Include="..\release\DoorWiz.ini" />
+    <None Include="..\release\hoglocs.scp" />
+    <None Include="..\release\Language\eng.lng" />
+    <None Include="..\release\LICENSE" />
+    <None Include="..\release\LightWiz.ini" />
+    <None Include="hlp\Account_Tab.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Add_Location.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Axis2.hhc" />
+    <None Include="hlp\Axis2.hhk" />
+    <CustomBuild Include="hlp\Axis2.hhp">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Making help file...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">start /wait hhc "hlp\Axis2.hhp"
+if not exist "hlp\Axis2.chm" goto :HelpError
+copy "hlp\Axis2.chm" "$(OutDir)Axis2.chm"
+goto :HelpDone
+:HelpError
+echo hlp\Axis2.hhp(1) : error:Problem encountered creating help file
+echo.
+:HelpDone
+echo.
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">hlp\HTMLDefines.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)$(ProjectName).chm;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Making help file...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">start /wait hhc "hlp\Axis2.hhp"
+if not exist "hlp\Axis2.chm" goto :HelpError
+copy "hlp\Axis2.chm" "$(OutDir)Axis2.chm"
+goto :HelpDone
+:HelpError
+echo hlp\Axis2.hhp(1) : error:Problem encountered creating help file
+echo.
+:HelpDone
+echo.
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">hlp\HTMLDefines.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)$(ProjectName).chm;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="hlp\Axis2_ini.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Color_Select.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Command_Tab.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\DoorWiz.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\DoorWiz_ini.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\General_Tab.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\ItemTweak_Tab.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Item_Tab.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Launcher_Tab.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\LightWiz.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\LightWiz_ini.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Local_Profile.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Log_Tab.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\PlayerTweak_Tab.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Profile_Login.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Profile_Tab.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Remote_Console.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Remote_Console_Login.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Search.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Setting_Tab.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Spawn_Tab.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Travel_Tab.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Web_Profile.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Web_Profile_Setup.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="hlp\Welcome.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="res\Axis2.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\release\changelog.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Axis2.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
