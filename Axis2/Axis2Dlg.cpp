@@ -152,7 +152,7 @@ int CAxis2Dlg::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	m_nid.uCallbackMessage = WM_USER;
 	m_nid.hIcon = m_hIcon;
 	CString csTip;
-	csTip.Format("%s (%s)", Main->GetVersionTitle(), Main->m_csCurentProfile);
+	csTip.Format("%s (%s)", Main->GetVersionTitle(), Main->m_csCurrentProfile);
 	strcpy_s(m_nid.szTip,sizeof(m_nid.szTip), csTip);
 	Shell_NotifyIcon(NIM_ADD, &m_nid);
 	m_bModeless = 1;
@@ -240,11 +240,17 @@ void CAxis2Dlg::UpdateTip()
 	m_nid.uCallbackMessage = WM_USER;
 	m_nid.hIcon = m_hIcon;
 	CString csTip;
-	csTip.Format("%s (%s)", Main->GetVersionTitle(), Main->m_csCurentProfile);
+	csTip.Format("%s (%s)", Main->GetVersionTitle(), Main->m_csCurrentProfile);
 	strcpy_s(m_nid.szTip,sizeof(m_nid.szTip), csTip);
 	Shell_NotifyIcon(NIM_MODIFY, &m_nid);
 }
 
+void CAxis2Dlg::ReloadActiveTabPage()
+{
+	int active = this->GetActiveIndex();
+	this->SetActivePage(-1);
+	this->SetActivePage(active);
+}
 
 //Settings Menu
 
@@ -309,7 +315,7 @@ void CAxis2Dlg::OnUnloadProfile()
 	Main->m_pScripts->UnloadProfile();
 	Main->LoadIni(1);
 	Main->LoadIni(2);
-	Main->m_csCurentProfile = CMsg(IDS_NONE);
+	Main->m_csCurrentProfile = CMsg(IDS_NONE);
 	UpdateTip();
 	AfxBeginThread(LoadProfileThread,(LPVOID)0);
 }
@@ -319,7 +325,7 @@ void CAxis2Dlg::OnLoadDefProfile()
 	Main->m_pScripts->UnloadProfile();
 	Main->LoadIni(1);
 	Main->LoadIni(2);
-	Main->m_csCurentProfile = Main->GetRegistryString("Default Profile");
+	Main->m_csCurrentProfile = Main->GetRegistryString("Default Profile");
 	UpdateTip();
 	AfxBeginThread(LoadProfileThread,(LPVOID)1);
 }
@@ -329,7 +335,7 @@ void CAxis2Dlg::OnLoadLastProfile()
 	Main->m_pScripts->UnloadProfile();
 	Main->LoadIni(1);
 	Main->LoadIni(2);
-	Main->m_csCurentProfile = Main->GetRegistryString("Last Profile Loaded");
+	Main->m_csCurrentProfile = Main->GetRegistryString("Last Profile Loaded");
 	UpdateTip();
 	AfxBeginThread(LoadProfileThread,(LPVOID)0);
 }

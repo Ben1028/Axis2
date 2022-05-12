@@ -481,6 +481,29 @@ int CScriptArray::Find(CString csName)
 	return -1;
 }
 
+int CScriptArray::Find(CString csName, BYTE type)
+{
+	if ( this->GetSize() == 0 )
+		return -1;
+
+	INT_PTR iLower = 0;
+	INT_PTR iUpper = this->GetUpperBound();
+	INT_PTR iIndex = 0;
+	while ( iLower <= iUpper )
+	{
+		iIndex = (iUpper + iLower ) / 2;
+		CSObject * pTest = (CSObject *) this->GetAt(iIndex);
+		CString csExisting = pTest->m_csValue;
+		if ( csExisting.CompareNoCase(csName) == 0 && pTest->m_bType == type)
+				return (int)iIndex;
+		if ( csExisting.CompareNoCase(csName) > 0 )
+			iUpper = iIndex - 1;
+		else
+			iLower = iIndex + 1;
+	}
+	return -1;
+}
+
 int CScriptArray::Insert(CTObject * pScript)
 {
 	if (( pScript->m_csValue == "" )&&( !pScript->m_bCustom ))
@@ -918,7 +941,7 @@ UINT LoadProfileThread(LPVOID pParam)
 		sProfile = Main->GetRegistryString("Default Profile");
 	else
 	{
-		sProfile = Main->m_csCurentProfile;
+		sProfile = Main->m_csCurrentProfile;
 	}
 
 	Main->m_pScripts->LoadProfile(sProfile);

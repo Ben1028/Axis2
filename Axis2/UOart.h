@@ -73,11 +73,14 @@ public:
 class CMultiRec
 {
 public:
+	CMultiRec() : hue(0) { }
+
 	WORD wIndex;
 	short x;
 	short y;
 	short z;
 	DWORD dwFlags;
+	DWORD hue;
 };
 
 class ArtAddress
@@ -90,11 +93,72 @@ public:
 	DWORD dwCompressedSize;
 };
 
+#pragma pack(1)
+struct OldLandTileData
+{
+	DWORD flags;
+	WORD texID;
+	char name[20];
+};
+#pragma pack(pop) 
+
+#pragma pack(1)
+struct NewLandTileData
+{
+	DWORD flags;
+	DWORD unk1;
+	WORD texID;
+	char name[20];
+};
+#pragma pack(pop) 
+
+#pragma pack(1)
+struct OldItemTileData
+{
+	DWORD Flags;
+	char Weight;
+	char Quality;
+	WORD Unknown;
+	char Unknown1;
+	char Quantity;
+	WORD AnimID;
+	char Unknown2;
+	char Hue;
+	WORD Unknown3;
+	char Height;
+	char Name[20];
+};
+#pragma pack(pop) 
+
+#pragma pack(1)
+struct NewItemTileData
+{
+	DWORD Flags;
+	DWORD Unknown;
+	char Weight;
+	char Quality;
+	WORD Unknown1;
+	char Unknown2;
+	char Quantity;
+	WORD AnimID;
+	char Unknown3;
+	char Hue;
+	WORD Unknown4;
+	char Height;
+	char Name[20];
+};
+#pragma pack(pop) 
+
+
 /////////////////////////////////////////////////////////////////////////////
 // CUOArt class
 
 class CUOArt : public CWnd
 {
+	OldLandTileData* GetOldLandTileData(int id);
+	NewLandTileData* GetNewLandTileData(int id);
+	OldItemTileData* GetOldItemTile(int id);
+	NewItemTileData* GetNewItemTile(int id);
 // Constructor
 public:
 	CUOArt();
@@ -110,10 +174,11 @@ protected:
 	DWORD BlendColors(WORD wBaseColor, WORD wAppliedColor, bool bBlendMode);
 	DWORD ScaleColor(WORD wColor);
 
-	BYTE m_tiledata [0x191800];
+	BYTE m_TileData[0x30A800];
 	WORD m_wArtWidth[0x10000];
 	WORD m_wArtHeight[0x10000];
 	bool m_bArtDataLoaded;
+	bool m_bIsUOAHS;
 	void LoadArtData();
 	void LoadTiledata();
 

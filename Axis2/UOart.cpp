@@ -53,6 +53,7 @@ CUOArt::CUOArt()
 	m_yOffset = 0;
 	m_wDrawFlags = 0;
 	m_bArtDataLoaded = false;
+	m_bIsUOAHS = false;
 	LoadArtData();
 	LoadTiledata();
 }
@@ -513,6 +514,20 @@ void CUOArt::DrawArt(short sArtType, CRect bounds, DWORD dwArtIndex, short dx, s
 				//Item Data
 				try
 				{
+					int tileFlags;
+					if (m_bIsUOAHS)
+					{
+						NewItemTileData* tileData = GetNewItemTile(dwArtIndex - 0x4000);
+						tileFlags = tileData->Flags;
+					}
+					else
+					{
+						OldItemTileData* tileData = GetOldItemTile(dwArtIndex - 0x4000);
+						tileFlags = tileData->Flags;
+					}	
+					
+					bool bIsBlended = (tileFlags & 0x00040000) == 0x00040000;
+
 					BYTE * bData = NULL;
 					DWORD dwOffset = 4;
 					fData.Seek(indexRec.dwLookup, CFile::begin);
@@ -563,7 +578,7 @@ void CUOArt::DrawArt(short sArtType, CRect bounds, DWORD dwArtIndex, short dx, s
 									Y = m_yOffset + dy + y + ((bounds.Height() - wArtHeight) / 2);
 									if ( X >= 0 && X < bounds.Width() && Y >= 0 && Y < bounds.Height() )
 									{
-										DWORD dwColor = BlendColors(wColor[iCount], wAppliedColor, false);
+										DWORD dwColor = BlendColors(wColor[iCount], wAppliedColor, bIsBlended);
 										BYTE r, g, b;
 										b = (BYTE) ((dwColor >> 16) & 0xFF);
 										g = (BYTE) ((dwColor >> 8) & 0xFF);
@@ -748,12 +763,19 @@ void CUOArt::DrawArt(short sArtType, CRect bounds, DWORD dwArtIndex, short dx, s
 				CMultiRec ** items = NULL;
 				
 				fData.Seek(indexRec.dwLookup, CFile::begin);
-				wItemCount = (WORD) (indexRec.dwSize / sizeof(CMultiRec));
+
+				int multiEntySize = sizeof(CMultiRec);
+				if(!m_bIsUOAHS)
+				{
+					multiEntySize -= 4;
+				}
+				
+				wItemCount = (WORD) (indexRec.dwSize / multiEntySize);
 				items = new CMultiRec * [wItemCount];
 				for ( WORD i = 0; i < wItemCount; i++ )
 				{
 					CMultiRec * pItem = new CMultiRec;
-					fData.Read(pItem, sizeof(CMultiRec));
+					fData.Read(pItem, multiEntySize);
 					items[i] = pItem;
 				}
 
@@ -778,9 +800,18 @@ void CUOArt::DrawArt(short sArtType, CRect bounds, DWORD dwArtIndex, short dx, s
 				{
 					int x, y;
 					// First, we need to get the item height from the tileinfo file.
-					DWORD tileOffset = 0x68800;	// Skip over the land data
-					tileOffset += ( items[i]->wIndex / 32 ) * 1188 + 4 + ( (items[i]->wIndex % 32 ) * 37 );
-					BYTE bItemHeight = m_tiledata[tileOffset + 16];
+					BYTE bItemHeight;
+					if (m_bIsUOAHS)
+					{
+						NewItemTileData* tileData = GetNewItemTile(dwArtIndex);
+						bItemHeight = tileData->Height;
+					}
+					else
+					{
+						OldItemTileData* tileData = GetOldItemTile(dwArtIndex);
+						bItemHeight = tileData->Height;
+					}
+
 					items[i]->dwFlags = bItemHeight;
 					x = items[i]->x - x1;
 					y = items[i]->y - y1;
@@ -830,7 +861,7 @@ void CUOArt::DrawArt(short sArtType, CRect bounds, DWORD dwArtIndex, short dx, s
 									continue;
 								int DX = ( pItem->x - pItem->y ) * 22;
 								int DY = ( pItem->x + pItem->y ) * 22 - (m_wArtHeight[pItem->wIndex + 0x4000] >> 1) - ( pItem->z * 4 );
- 								DrawArt(ART_ITEM, bounds, (WORD) pItem->wIndex + 0x4000, DX, DY, 0);
+ 								DrawArt(ART_ITEM, bounds, (WORD) pItem->wIndex + 0x4000, DX, DY, pItem->wIndex);
 							}
 						}
 					}
@@ -918,7 +949,8 @@ void CUOArt::LoadTiledata()
 	CString csFile = Main->GetMulPath(VERFILE_TILEDATA);
 	if ( cfTiledata.Open(csFile, CFile::modeRead | CFile::typeBinary | CFile::shareDenyNone) )
 	{
-		cfTiledata.Read(&m_tiledata, 0x191800);
+		size_t cfTiledata_size = cfTiledata.GetLength();
+		cfTiledata.Read(&m_TileData, min(0x30A800, cfTiledata_size));
 		cfTiledata.Close();
 	}
 }
@@ -931,10 +963,16 @@ void CUOArt::LoadArtData()
 	CString csIdxFile, csMulFile;
 	csIdxFile = Main->GetMulPath(VERFILE_ARTIDX);
 	csMulFile = Main->GetMulPath(VERFILE_ART);
-	DWORD * dwIdx = new DWORD [0x30000];
+	DWORD * dwIdx = new DWORD [0x3BF94];
 	if ( cfArtIdx.Open(csIdxFile, CFile::modeRead | CFile::typeBinary | CFile::shareDenyNone) )
 	{
-		cfArtIdx.Read(&dwIdx[0], 0xC0000);
+		size_t cfArtIdx_size = cfArtIdx.GetLength();
+		if(cfArtIdx_size >= 0xEFE50)
+		{
+			m_bIsUOAHS = true;
+		}
+
+		cfArtIdx.Read(&dwIdx[0], min(0xEFE50, cfArtIdx_size));
 		cfArtIdx.Close();
 
 		if ( cfArtMul.Open(csMulFile, CFile::modeRead | CFile::typeBinary | CFile::shareDenyNone) )
@@ -973,6 +1011,8 @@ void CUOArt::LoadArtData()
 		csMulFile = Main->GetMulPath(VERFILE_ART_UOP);
 		if ( cfArtMul.Open(csMulFile, CFile::modeRead | CFile::typeBinary | CFile::shareDenyNone) )
 		{
+			m_bIsUOAHS = true;
+
 			//Parse UOP art file for quick reference
 			DWORD dwUOPHashLo, dwUOPHashHi, dwCompressedSize, dwHeaderLenght;
 			DWORD dwFilesInBlock, dwTotalFiles;
@@ -991,7 +1031,6 @@ void CUOArt::LoadArtData()
 				cfArtMul.Read(&dwUOPHashLo, sizeof(DWORD));
 				cfArtMul.Read(&dwUOPHashHi, sizeof(DWORD));
 				dwUOPPtr = ((__int64)dwUOPHashHi << 32) + dwUOPHashLo;
-
 
 				while ((dwFilesInBlock > 0)&&(dwTotalFiles > 0))
 				{
@@ -1952,6 +1991,99 @@ CBitmap * CUOArt::OnCreateIcon(int iBitWidth, int iBitHeight, int iID, WORD wApp
 	fIndex.Close();
 
 	return m_cIcon.Close();
+}
+
+
+OldLandTileData* CUOArt::GetOldLandTileData(int id)
+{
+	int currpos = 0;
+	int currentId = 0;
+	for (int i = 0; i < 0x4000; i += 32)
+	{
+		currpos += 4; // skip header
+		for (int count = 0; count < 32; ++count)
+		{
+			if (currentId == id)
+			{
+				return (OldLandTileData*)&m_TileData[currpos];
+			}
+				
+			currpos += sizeof(OldLandTileData);
+			currentId++;
+		}
+	}
+
+	return nullptr;
+}
+
+NewLandTileData* CUOArt::GetNewLandTileData(int id)
+{
+	int currpos = 0;
+	int currentId = 0;
+	for (int i = 0; i < 0x4000; i += 32)
+	{
+		currpos += 4; // skip header
+		for (int count = 0; count < 32; ++count)
+		{
+			if (currentId == id)
+			{
+				return (NewLandTileData*)&m_TileData[currpos];
+			}
+
+			currpos += sizeof(NewLandTileData);
+			currentId++;
+		}
+	}
+
+	return nullptr;
+}
+
+OldItemTileData* CUOArt::GetOldItemTile(int id)
+{
+	int currpos = (0x4000 / 32) * ((sizeof(OldLandTileData) * 32) + 4);
+	long remaining = sizeof(m_TileData) - currpos;
+	int itemsLength = (remaining / ((sizeof(OldItemTileData) * 32) + 4)) * 32;
+	int currentId = 0;
+	for (int i = 0; i < itemsLength; i += 32)
+	{
+		currpos += 4;
+		for (int count = 0; count < 32; ++count)
+		{
+			if (currentId == id)
+			{
+				return (OldItemTileData*)&m_TileData[currpos];
+			}
+
+			currpos += sizeof(OldItemTileData);
+			currentId++;
+		}
+	}
+
+	return nullptr;
+}
+
+NewItemTileData* CUOArt::GetNewItemTile(int id)
+{
+	int currpos = (0x4000 / 32) * ((sizeof(NewLandTileData) * 32) + 4);
+	long remaining = sizeof(m_TileData) - currpos;
+	int itemsLength = (remaining / ((sizeof(NewItemTileData) * 32) + 4)) * 32;
+	int currentId = 0;
+	for (int i = 0; i < itemsLength; i += 32)
+	{
+		currpos += 4;
+		for (int count = 0; count < 32; ++count)
+		{
+			if (currentId == id)
+			{
+				return (NewItemTileData*)&m_TileData[currpos];
+			}
+
+			currpos += sizeof(NewItemTileData);
+			currentId++;
+		}
+	}
+
+	return nullptr;
 }
 
 CBitmapDC::	CBitmapDC(int width, int height, COLORREF background):

@@ -369,3 +369,21 @@
  -Removed: Incomplete language selection option from the settings
  -Added: Disable toolbar mode option on the general settings tab to disable the toolbar mode when minimized.
  -Added: Custom Client Title option in general settings to allow for custom client titles to be recognised by Axis.
+ 
+ 
+ 
+ ***Version 2.0.?*** (ares@alathair.de)
+ 
+ +September 16, 2018+
+ -Fixed: sound.mul crash bug
+ -Fixed: missing multis in item tab
+ -Fixed/Replaced: Nonworking folder pickers.
+ -Added: AOS Multi Support
+ -Added: Error logging for faulty scripts
+ -Added: AOS Art&Tiledata Support
+ -Added: Partial Hue Item Preview
+ -Fixed: Client window lookup with empty custom client title should work now and will not find an empty title system window.
+ -Fixed: Dupeitems should not appear anymore for corresponding multi ids.
+ -Added: Categories starting with '$' will be ignored and not be shown in any list.
+ -Fixed: More usefull debug hint for duplicate spells.
+ -Fixed: Active tab will be refreshed after loading/unloading a profile. So interacting with it will not cause crashes anymore.

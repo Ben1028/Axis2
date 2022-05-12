@@ -1657,7 +1657,7 @@ void CTravelTab::OnSaveQuicklist(CString csList)
 		CSObject * pObject = (CSObject *) Main->m_pScripts->m_AreaQuickList.GetAt(iCount);
 		aQuicklist.Add(pObject->m_csValue);
 		CString csProfileKey;
-		csProfileKey.Format("%s\\%s\\Quicklist",REGKEY_PROFILE, Main->m_csCurentProfile);
+		csProfileKey.Format("%s\\%s\\Quicklist",REGKEY_PROFILE, Main->m_csCurrentProfile);
 		Main->PutRegistryMultiSz(csList, &aQuicklist, hRegLocation, csProfileKey);
 	}
 }

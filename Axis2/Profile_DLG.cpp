@@ -128,7 +128,7 @@ BOOL CProfileDLG::OnInitDialog()
 	LONG lStatus;
 	int iIndex = 0;
 	CString csCruProf, csDefault;
-	csCruProf.Format("Current Profile : %s",Main->m_csCurentProfile);
+	csCruProf.Format("Current Profile : %s",Main->m_csCurrentProfile);
 	m_ceCurProfile.SetWindowText(csCruProf);
 	csDefault = Main->GetRegistryString("Default Profile", "");
 	m_clbProfiles.AddString("<Axis Profile>");
@@ -668,14 +668,9 @@ void CProfileDLG::OnCancelprofile()
 
 void CProfileDLG::OnDirbrowse() 
 {
-
-	CString pathSelected, m_csBaseDir;
-	CFolderDialog dlg(&pathSelected,"Choose folder");
-	m_ceBaseDir.GetWindowText(m_csBaseDir);
-	dlg.m_ofn.lpstrInitialDir = m_csBaseDir;
-	if (dlg.DoModal() == IDOK)
+	TCHAR pathSelected[MAX_PATH];
+	if (GetPathDlg(this->GetSafeHwnd(), pathSelected, _T("Choose folder")) == TRUE)
 		m_ceBaseDir.SetWindowText(pathSelected);
-	return;	
 }
 
 void CProfileDLG::OnLoadScripts()
@@ -687,7 +682,7 @@ void CProfileDLG::OnLoadScripts()
 	m_ceName.GetWindowText(m_csName);
 	csCruProf.Format("Current Profile : %s",m_csName);
 	m_ceCurProfile.SetWindowText(csCruProf);
-	Main->m_csCurentProfile = m_csName;
+	Main->m_csCurrentProfile = m_csName;
 	CAxis2Dlg * hParent = (CAxis2Dlg *)this->GetParent();
 	hParent->UpdateTip();
 	AfxBeginThread(LoadProfileThread,(LPVOID)0);
@@ -857,7 +852,7 @@ void CProfileDLG::OnExport()
 	CString csLine, csFile;
 	CStdioFile pFile;
 
-	CFileDialog dlg(FALSE, "scp", Main->m_csCurentProfile, OFN_HIDEREADONLY, "Script Files (*.scp)|*.scp||" , NULL);
+	CFileDialog dlg(FALSE, "scp", Main->m_csCurrentProfile, OFN_HIDEREADONLY, "Script Files (*.scp)|*.scp||" , NULL);
 	if ( dlg.DoModal() == IDOK )
 	{
 		csFile = dlg.GetFileName();
